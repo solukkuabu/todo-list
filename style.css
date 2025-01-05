@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.todo-app {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput, #reminderInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+#taskInput:focus, #reminderInput:focus {
+    border-color: #5c6bc0;
+}
+
+#addTaskButton {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addTaskButton:hover {
+    background-color: #3949ab;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #5c6bc0;
+    font-size: 18px;
+}
+
+button:hover {
+    color: #3949ab;
+}
+
+button.delete {
+    color: #ff5252;
+}
+
+button.delete:hover {
+    color: #d32f2f;
+}
+
+.reminder {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .todo-app {
+        padding: 15px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    #taskInput, #reminderInput {
+        width: 100%;
+    }
+
+    #addTaskButton {
+        width: 100%;
+    }
+}
